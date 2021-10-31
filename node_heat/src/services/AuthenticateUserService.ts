@@ -2,7 +2,7 @@ import axios from "../../node_modules/axios/index";
 
 class AuthenticateUserService {
   async execute(code: string) {
-    const url = "https://github.com/login/oauth/acces_token";
+    const url = "https://github.com/login/oauth/access_token";
 
     const response = await axios.post(url, null, {
       params: {
@@ -11,13 +11,12 @@ class AuthenticateUserService {
         code,
       },
       headers: {
-        "Accept": "application/json"
+        Accept: "application/json",
       },
-    })
+    });
 
     return response.data;
-
   }
-};
+}
 
 export { AuthenticateUserService };
