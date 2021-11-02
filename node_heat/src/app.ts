@@ -6,7 +6,7 @@ import { router } from './routes';
 import { Server } from 'socket.io';
 
 const app = express();
-app.use(cors);
+app.use(cors());
 
 const serverHttp = http.createServer(app);
 
@@ -36,4 +36,4 @@ app.get('/signin/callback', (request, response) => {
   return response.json(code);
 });
 
-app.listen(3005, () => console.log('🚀 Server is running on PORT 3005'));
+export { serverHttp, io };
