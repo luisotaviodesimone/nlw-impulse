@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "nlwheatapp",
+    "slug": "nlwheatapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/custom_icon.png",
+    "splash": {
+      "image": "./assets/custom_splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#121214"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/custom_adaptive-icon.png",
+        "backgroundColor": "#121214"
+      }
+    },
+    "web": {
+      "favicon": "./assets/custom_favicon.png"
+    }
+  }
+}
