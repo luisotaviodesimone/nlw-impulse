@@ -17,7 +17,7 @@ export function SendMessageForm() {
 
     await api.post('messages', { message });
 
-    setMessage('')
+    setMessage('');
   }
 
   return (
@@ -31,7 +31,7 @@ export function SendMessageForm() {
           <img src={user?.avatar_url} alt={user?.name} />
         </div>
         <strong className={styles.userName}>{user?.name}</strong>
-        <div className={styles.userGithub}>
+        <div className={styles.userGitHub}>
           <VscGithubInverted size="16" />
           {user?.login}
         </div>
