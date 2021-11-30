@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { View } from 'react-native';
+import { TextInput, View } from 'react-native';
+import { COLORS } from '../../theme';
+import { Button } from '../Button';
 
 import { styles } from './styles';
 
 export function SendMessageForm() {
-  return <View style={styles.container}></View>;
+  const [message, setMessage] = useState('');
+  const [sendingMessage, setSendingMessage] = useState(false);
+  return (
+    <View style={styles.container}>
+      <TextInput
+        style={styles.input}
+        keyboardAppearance="dark"
+        placeholder="Qual sua expectativa para o evento"
+        placeholderTextColor={COLORS.GRAY_PRIMARY}
+        multiline
+        maxLength={140}
+        onChangeText={setMessage}
+        value={message}
+        editable={!sendingMessage}
+      />
+      <Button
+        title="enviar mensagem"
+        backgroundColor={COLORS.PINK}
+        color={COLORS.WHITE}
+      />
+    </View>
+  );
 }
