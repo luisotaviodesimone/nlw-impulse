@@ -17,7 +17,6 @@ export const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-
   },
   userName: {
     fontSize: 15,
