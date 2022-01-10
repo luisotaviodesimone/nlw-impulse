@@ -33,22 +33,22 @@ export function SendMessageForm() {
   return (
     <View style={styles.container}>
       <TextInput
-        style={styles.input}
         keyboardAppearance="dark"
         placeholder="Qual sua expectativa para o evento"
         placeholderTextColor={COLORS.GRAY_PRIMARY}
         multiline
         maxLength={140}
-        value={message}
         onChangeText={setMessage}
-        // editable={!isSendingMessage}
+        value={message}
+        style={styles.input}
+        editable={!isSendingMessage}
         />
       <Button
         title="enviar mensagem"
         backgroundColor={COLORS.PINK}
         color={COLORS.WHITE}
         onPress={handleMessageSubmit}
-        // isLoading={isSendingMessage}
+        isLoading={isSendingMessage}
       />
     </View>
   );

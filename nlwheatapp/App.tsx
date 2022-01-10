@@ -6,6 +6,7 @@ import {
 } from '@expo-google-fonts/roboto';
 import AppLoading from 'expo-app-loading';
 import { StatusBar } from 'expo-status-bar';
+
 import { AuthProvider, useAuth } from './src/hooks/auth';
 import { Home } from './src/screens/Home';
 

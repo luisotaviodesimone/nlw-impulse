@@ -6,6 +6,8 @@ import { api } from '../services/api';
 export type User = {
   id: string;
   avatar_url: string;
+  name: string;
+  login: string;
 };
 
 type AuthContextData = {
@@ -61,7 +63,7 @@ function AuthProvider({ children }: AuthProviderProps) {
           code: authSessionResponse.params.code,
         });
 
-        const { token, user } = authResponse.data as AuthResponse;
+        const { user, token } = authResponse.data as AuthResponse;
 
         api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
